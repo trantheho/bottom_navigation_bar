@@ -1,3 +1,7 @@
+import 'package:bottomnavigationbar/history.dart';
+import 'package:bottomnavigationbar/home.dart';
+import 'package:bottomnavigationbar/map.dart';
+import 'package:bottomnavigationbar/profile.dart';
 import 'package:flutter/material.dart';
 
 import 'bottom_navigation_bar.dart';
@@ -31,6 +35,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  List<Widget> _children;
+  int childrenIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    initChildren();
+    childrenIndex = 0;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,12 +83,28 @@ class _MyHomePageState extends State<MyHomePage> {
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 300),
         onTap: (index) {
-          print(index);
+          setState(() {
+            if(index == 2)
+              childrenIndex = childrenIndex;
+            if(index == 3)
+              childrenIndex = 2;
+            if(index == 4)
+              childrenIndex = 3;
+            if(index < 2)
+              childrenIndex = index;
+          });
         },
       ),
-      body: Container(
-        color: Colors.white,
-      ),
+      body: _children[childrenIndex]
     );
+  }
+
+  initChildren(){
+    return _children = [
+      HomeScreen(),
+      MapScreen(),
+      HistoryScreen(),
+      ProfileScreen()
+    ];
   }
 }
