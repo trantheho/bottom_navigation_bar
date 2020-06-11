@@ -36,7 +36,7 @@ final List<Coffee> coffeeShops = [
       shopName: 'Chợ Hoàng Hoa Thám',
       address: '240 Sullivan St',
       description:
-      'Small spot draws serious caffeine lovers with wide selection of brews & baked goods.',
+      'Small spot draws serious caffeine lovers with',
       locationCoords: LatLng(10.8018416, 106.6549777),
       thumbNail: 'https://lh5.googleusercontent.com/p/AF1QipPGoxAP7eK6C44vSIx4SdhXdp78qiZz2qKp8-o1=w90-h90-n-k-no'
   ),
@@ -44,7 +44,7 @@ final List<Coffee> coffeeShops = [
       shopName: 'Tin Học Ngôi Sao',
       address: '214 E 10th St',
       description:
-      'Snazzy, compact Japanese cafe showcasing high-end coffee & sandwiches, plus sake & beer at night.',
+      'Snazzy, compact Japanese cafe showcasing high-end coffee',
       locationCoords: LatLng(10.8018416, 106.6549777),
       thumbNail: 'https://lh5.googleusercontent.com/p/AF1QipNhygtMc1wNzN4n6txZLzIhgJ-QZ044R4axyFZX=w90-h90-n-k-no'
   ),
@@ -52,7 +52,7 @@ final List<Coffee> coffeeShops = [
       shopName: 'Lotte Cộng Hòa',
       address: '301 W Broadway',
       description:
-      'Compact coffee & espresso bar turning out drinks made from direct-trade beans in a low-key setting.',
+      'Compact coffee & espresso bar turning out drinks',
       locationCoords: LatLng(10.8018416, 106.6549777),
       thumbNail: 'https://lh5.googleusercontent.com/p/AF1QipOMNvnrTlesBJwUcVVFBqVF-KnMVlJMi7_uU6lZ=w90-h90-n-k-no'
   )

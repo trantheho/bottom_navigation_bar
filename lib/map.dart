@@ -156,7 +156,7 @@ class _MapScreenState extends State<_MapScreen> {
               child: GoogleMap(
                 initialCameraPosition: CameraPosition(
                     target: _center,
-                    zoom: 18.0,
+                    zoom: 12.0,
                     bearing: 45.0,
                     tilt: 45.0,
                 ),
@@ -192,7 +192,7 @@ class _MapScreenState extends State<_MapScreen> {
   moveCamera() {
     _controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
         target: coffeeShops[_pageController.page.toInt()].locationCoords,
-        zoom: 18.0,
+        zoom: 14.0,
         bearing: 45.0,
         tilt: 45.0)));
   }
