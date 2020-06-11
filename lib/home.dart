@@ -36,88 +36,77 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
   @override
   Widget build(BuildContext context) {
     return Container(
+
       child: SingleChildScrollView(
-        child: Stack(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Column(
-              children: <Widget>[
-                Container(
-                  height: 200,
-                  color: Color.fromRGBO(0, 153, 153, 1),
-                )
-              ],
-            ),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                SizedBox(height: 80),
-                Container(
-                  margin: EdgeInsets.only(left: 14, right: 14),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      _buildSearch(),
-                      Container(
-                        margin: EdgeInsets.only(left: 12),
-                        child: Stack(
-                          children: <Widget>[
-                            Icon(
-                              Icons.notifications_none,
-                              color: Colors.white,
-                              size: 26,
+            SizedBox(height: 80),
+            Container(
+              margin: EdgeInsets.only(left: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  _buildSearch(),
+                  Container(
+                    margin: EdgeInsets.only(left: 12),
+                    child: Stack(
+                      children: <Widget>[
+                        Icon(
+                          Icons.notifications_none,
+                          color: Color.fromRGBO(0, 153, 153, 1),
+                          size: 26,
+                        ),
+                        Positioned(
+                          top: 2,
+                          right: 3,
+                          child: Container(
+                            width: 8,
+                            height: 8,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.red
                             ),
-                            Positioned(
-                              top: 2,
-                              right: 3,
-                              child: Container(
-                                width: 8,
-                                height: 8,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.red
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                     /* Container(
-                        child: IconButton(
-                          icon:AnimatedIcon(
-                            icon: AnimatedIcons.menu_close,
-                            progress: iconAnimationController,),
-                          splashColor: Colors.transparent,
-                          color: Colors.white,
-                          iconSize: 26,
-                          onPressed: (){
-                            if(!start){
-                              iconAnimationController.forward();
-                              start = true;
-                            }else{
-                              iconAnimationController.reverse();
-                              start = false;
-                            }
-                          },
-                        ),
-                      ),*/
-                    ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  height: 40,
-                  margin: EdgeInsets.only(left: 16, right: 16, top: 26),
-                  child: ListView.builder(
-                    itemCount: jobName.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index){
-                      return ItemBranchJob(
-                        title: jobName[index],
-                      );
-                    },
+                  Container(
+                    child: IconButton(
+                      icon:AnimatedIcon(
+                        icon: AnimatedIcons.menu_close,
+                        progress: iconAnimationController,),
+                      splashColor: Colors.transparent,
+                      color: Color.fromRGBO(0, 153, 153, 1),
+                      iconSize: 26,
+                      onPressed: (){
+                        if(!start){
+                          iconAnimationController.forward();
+                          start = true;
+                        }else{
+                          iconAnimationController.reverse();
+                          start = false;
+                        }
+                      },
+                    ),
                   ),
-                )
-              ],
+                ],
+              ),
             ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.only(top: 32, left: 14),
+              child: Text(
+                'Header 01',
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color.fromRGBO(0, 51, 102, 1),
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+            )
           ],
         ),
       ),
