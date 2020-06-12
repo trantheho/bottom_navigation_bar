@@ -24,6 +24,40 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
   AnimationController iconAnimationController;
   bool start = false;
   List<String> jobName = ['Du lịch', 'Nhà hàng', 'Vận tải', 'Khách sạn'];
+  List<JobItem> jobs = [
+    JobItem(
+        title: 'Mua phế liệu',
+        companyName: 'CTY TNHH Hòa Phát',
+        access: 'assets/icons/logo1.png',
+        address: '138 Lê lợi, Q.Hoàn Kiếm, Đông Anh, Hà Nội',
+        time: '9H-10H',
+        money: '100.000 VND'),
+    JobItem(
+        title: 'Mua phế liệu',
+        companyName: 'CTY TNHH Hòa Phát',
+        access: 'assets/icons/logo1.png',
+        address: '138 Lê lợi, Q.Hoàn Kiếm, Đông Anh, Hà Nội',
+        time: '9H-10H',
+        money: '100.000 VND'),
+    JobItem(
+        title: 'Mua phế liệu',
+        companyName: 'CTY TNHH Hòa Phát',
+        access: 'assets/icons/logo1.png',
+        address: '138 Lê lợi, Q.Hoàn Kiếm, Đông Anh, Hà Nội',
+        time: '9H-10H',
+        money: '100.000 VND'),
+    JobItem(
+        title: 'Mua phế liệu',
+        companyName: 'CTY TNHH Hòa Phát',
+        access: 'assets/icons/logo1.png',
+        address: '138 Lê lợi, Q.Hoàn Kiếm, Đông Anh, Hà Nội',
+        time: '9H-10H',
+        money: '100.000 VND'),
+
+
+
+
+  ];
 
 
   @override
@@ -101,11 +135,24 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 'Header 01',
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  fontSize: 16,
-                  color: Color.fromRGBO(0, 51, 102, 1),
+                  fontSize: 17,
+                  color: Color.fromRGBO(0, 0, 0, 1),
                   fontWeight: FontWeight.bold
                 ),
               ),
+            ),
+
+            Container(
+              height: MediaQuery.of(context).size.height,
+              margin: EdgeInsets.only(top: 10, left: 16, right: 16, bottom: 16),
+              child: ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: EdgeInsets.zero,
+                  itemCount: jobs.length,
+                  itemBuilder: (context, index){
+                    return ItemBranchJob(item: jobs[index],);
+                  }),
             )
           ],
         ),
@@ -127,7 +174,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(28)),
                 border: Border.all(width: 1, color: Colors.grey),
-                color: Colors.grey[50]
+                color: Colors.white
             ),
             child: Center(
               child: Row(
