@@ -1,4 +1,5 @@
 import 'package:bottomnavigationbar/item_branch_job.dart';
+import 'package:bottomnavigationbar/item_company_job.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -54,9 +55,46 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
         time: '9H-10H',
         money: '100.000 VND'),
 
+  ];
 
 
-
+  List<CompanyJobItem> company = [
+    CompanyJobItem(
+      asset: 'assets/icons/logo1.png',
+      companyName: 'RoyalTea Coffee',
+      address: '123 Tân Bình, Tp.HCM',
+      counterJob: 20,
+    ),
+    CompanyJobItem(
+      asset: 'assets/icons/logo4.jpg',
+      companyName: 'RoyalTea Coffee',
+      address: '123 Tân Bình, Tp.HCM',
+      counterJob: 20,
+    ),
+    CompanyJobItem(
+      asset: 'assets/icons/logo3.png',
+      companyName: 'RoyalTea Coffee',
+      address: '123 Tân Bình, Tp.HCM',
+      counterJob: 20,
+    ),
+    CompanyJobItem(
+      asset: 'assets/icons/logo2.jpg',
+      companyName: 'RoyalTea Coffee',
+      address: '123 Tân Bình, Tp.HCM',
+      counterJob: 20,
+    ),
+    CompanyJobItem(
+      asset: 'assets/icons/logo3.png',
+      companyName: 'RoyalTea Coffee',
+      address: '123 Tân Bình, Tp.HCM',
+      counterJob: 20,
+    ),
+    CompanyJobItem(
+      asset: 'assets/icons/logo4.jpg',
+      companyName: 'RoyalTea Coffee',
+      address: '123 Tân Bình, Tp.HCM',
+      counterJob: 20,
+    ),
   ];
 
 
@@ -78,6 +116,19 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
             SizedBox(height: 80),
             Container(
               margin: EdgeInsets.only(left: 14),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Home',
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                    fontSize: 24,
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 14, top: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -128,11 +179,38 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 ],
               ),
             ),
+
             Container(
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.only(top: 32, left: 14),
               child: Text(
                 'Header 01',
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                    fontSize: 17,
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+            Container(
+              height: 150,
+              margin: EdgeInsets.only(top: 10, left: 16, right: 16, bottom: 16),
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.zero,
+                  physics: AlwaysScrollableScrollPhysics(),
+                  itemCount: company.length,
+                  itemBuilder: (context, index){
+                    return ItemCompanyJob(companyJobItem: company[index],);
+                  }),
+            ),
+
+            Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.only(left: 14),
+              child: Text(
+                'Header 02',
                 textAlign: TextAlign.start,
                 style: TextStyle(
                   fontSize: 17,
@@ -141,12 +219,11 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 ),
               ),
             ),
-
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: 300.0,
               margin: EdgeInsets.only(top: 10, left: 16, right: 16, bottom: 16),
               child: ListView.builder(
-                  scrollDirection: Axis.vertical,
+                  //scrollDirection: Axis.vertical,
                   physics: AlwaysScrollableScrollPhysics(),
                   padding: EdgeInsets.zero,
                   itemCount: jobs.length,
