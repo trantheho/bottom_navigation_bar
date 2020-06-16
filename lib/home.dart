@@ -121,7 +121,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 'Home',
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 26,
                     color: Color.fromRGBO(23, 43, 77, 1),
                     fontWeight: FontWeight.bold
                 ),
