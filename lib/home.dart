@@ -108,7 +108,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
   @override
   Widget build(BuildContext context) {
     return Container(
-
+      color: Color.fromRGBO(242, 244, 246, 1),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 textAlign: TextAlign.start,
                 style: TextStyle(
                     fontSize: 24,
-                    color: Color.fromRGBO(0, 0, 0, 1),
+                    color: Color.fromRGBO(23, 43, 77, 1),
                     fontWeight: FontWeight.bold
                 ),
               ),
@@ -188,7 +188,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 textAlign: TextAlign.start,
                 style: TextStyle(
                     fontSize: 17,
-                    color: Color.fromRGBO(0, 0, 0, 1),
+                    color: Color.fromRGBO(23, 43, 77, 1),
                     fontWeight: FontWeight.bold
                 ),
               ),
@@ -214,13 +214,13 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
                 textAlign: TextAlign.start,
                 style: TextStyle(
                   fontSize: 17,
-                  color: Color.fromRGBO(0, 0, 0, 1),
+                  color: Color.fromRGBO(23, 43, 77, 1),
                   fontWeight: FontWeight.bold
                 ),
               ),
             ),
             Container(
-              height: 300.0,
+              height: 350.0,
               margin: EdgeInsets.only(top: 10, left: 16, right: 16, bottom: 16),
               child: ListView.builder(
                   //scrollDirection: Axis.vertical,
@@ -250,8 +250,8 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
             height: 36,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(28)),
-                border: Border.all(width: 1, color: Colors.grey),
-                color: Colors.white
+                border: Border.all(width: 1, color: Colors.grey[300]),
+              color: Color.fromRGBO(254, 254, 254, 1),
             ),
             child: Center(
               child: Row(

@@ -12,11 +12,11 @@ class ItemBranchJob extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 140,
+      height: 120,
       margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
+        color: Color.fromRGBO(254, 254, 254, 1),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
@@ -46,7 +46,7 @@ class ItemBranchJob extends StatelessWidget {
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Color.fromRGBO(0, 0, 0, 1),
+                        color: Color.fromRGBO(22, 43, 77, 1),
                       ),
                     ),
                   ),
@@ -57,7 +57,7 @@ class ItemBranchJob extends StatelessWidget {
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: 13,
-                        color: Color.fromRGBO(112, 128, 144, 1),
+                        color: Color.fromRGBO(79, 95, 119, 1),
                       ),
                     ),
                   ),
@@ -94,7 +94,7 @@ class ItemBranchJob extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(left: 8),
                   child: Text(
-                    item.time,
+                    'Thời gian: ' + item.time,
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: 14,
@@ -102,23 +102,25 @@ class ItemBranchJob extends StatelessWidget {
                     ),
                   ),
                 ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.all(4),
-            margin: EdgeInsets.only(left: 16),
-            child: Row(
-              children: <Widget>[
-                Icon(Icons.attach_money, size: 18,color: Color.fromRGBO(99, 115, 131, 1),),
-                Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    item.money,
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Color.fromRGBO(99, 115, 131, 1),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(right: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Icon(Icons.attach_money, size: 18,color: Color.fromRGBO(99, 115, 131, 1),),
+                        Container(
+                          //margin: EdgeInsets.only(left: 8),
+                          child: Text(
+                            item.money,
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color.fromRGBO(99, 115, 131, 1),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

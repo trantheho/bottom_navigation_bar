@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Color.fromRGBO(0, 153, 153, 1),
         selectedColor: Colors.white,
         defaultColor: Colors.black45,
-        backgroundColor: Colors.transparent.withOpacity(0),
+        backgroundColor: Colors.black,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 300),
         onTap: (index) {

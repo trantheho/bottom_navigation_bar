@@ -20,7 +20,7 @@ class _ItemCompanyJobState extends State<ItemCompanyJob> {
       margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
+        color: Color.fromRGBO(254, 254, 254, 1),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
@@ -43,7 +43,7 @@ class _ItemCompanyJobState extends State<ItemCompanyJob> {
                   widget.companyJobItem.companyName,
                   style: TextStyle(
                       fontSize: 14,
-                      color: Color.fromRGBO(0, 0, 0, 1),
+                      color: Color.fromRGBO(22, 43, 77, 1),
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -59,7 +59,7 @@ class _ItemCompanyJobState extends State<ItemCompanyJob> {
                     color: Color.fromRGBO(99, 115, 131, 1),
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 8),
+                    margin: EdgeInsets.only(left: 4),
                     child: Text(
                       widget.companyJobItem.address,
                       overflow: TextOverflow.ellipsis,
