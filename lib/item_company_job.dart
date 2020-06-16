@@ -17,14 +17,14 @@ class _ItemCompanyJobState extends State<ItemCompanyJob> {
       width: 160,
       height: 120,
       padding: EdgeInsets.all(8),
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.only(right: 14, top: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Color.fromRGBO(254, 254, 254, 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            blurRadius: 4,
+            color: Colors.grey[300].withOpacity(0.5),
+            blurRadius: 2,
           ),
         ],
       ),

@@ -13,14 +13,14 @@ class ItemBranchJob extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 120,
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.only(top: 8, bottom: 8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
         color: Color.fromRGBO(254, 254, 254, 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            blurRadius: 4,
+            color: Colors.grey[300].withOpacity(0.5),
+            blurRadius: 2,
           ),
         ],
       ),

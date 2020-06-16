@@ -182,7 +182,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
 
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(top: 32, left: 14),
+              margin: EdgeInsets.only(top: 16, left: 14),
               child: Text(
                 'Header 01',
                 textAlign: TextAlign.start,
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
             ),
             Container(
               height: 150,
-              margin: EdgeInsets.only(top: 10, left: 16, right: 16, bottom: 16),
+              margin: EdgeInsets.only(top: 10, left: 14, bottom: 16),
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.zero,
@@ -221,7 +221,7 @@ class _HomeScreenState extends State<_HomeScreen> with SingleTickerProviderState
             ),
             Container(
               height: 350.0,
-              margin: EdgeInsets.only(top: 10, left: 16, right: 16, bottom: 16),
+              margin: EdgeInsets.only(top: 10, left: 14, right: 14, bottom: 16),
               child: ListView.builder(
                   //scrollDirection: Axis.vertical,
                   physics: AlwaysScrollableScrollPhysics(),

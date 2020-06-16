@@ -66,12 +66,23 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.transparent,
       height: widget.height,
       child: Stack(
         overflow: Overflow.visible,
         alignment: Alignment.bottomCenter,
         children: <Widget>[
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0 - (80.0 - widget.height),
+            child: CustomPaint(
+              painter: NavCustomPainter(
+                  _pos, _length, Colors.grey[300], Directionality.of(context)),
+              child: Container(
+                height: 82.0,
+              ),
+            ),
+          ),
           Positioned(
             left: 0,
             right: 0,
