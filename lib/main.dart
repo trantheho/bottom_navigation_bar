@@ -73,10 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomBarItem(icon: Icons.history, title: 'Lịch sử'),
           BottomBarItem(icon: Icons.perm_identity, title: 'Cá nhân'),
         ],
-        color: Colors.white,
+        color: Color.fromRGBO(254, 254, 254, 1),
         selectedColor: Color.fromRGBO(0, 153, 153, 1),
         defaultColor: Colors.black45,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent.withOpacity(0),
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 300),
         onTap: (index) {
