@@ -150,21 +150,28 @@ class _MapScreenState extends State<_MapScreen> {
         ),
         body: Stack(
           children: <Widget>[
-            Container(
-              height: MediaQuery.of(context).size.height - 50.0,
-              width: MediaQuery.of(context).size.width,
-              child: GoogleMap(
-                initialCameraPosition: CameraPosition(
-                    target: _center,
-                    zoom: 12.0,
-                    bearing: 45.0,
-                    tilt: 45.0,
+            GestureDetector(
+              onTap: (){
+                FocusScope.of(context).unfocus();
+              },
+              child: Container(
+                height: MediaQuery.of(context).size.height - 50.0,
+                width: MediaQuery.of(context).size.width,
+                child: GoogleMap(
+                  initialCameraPosition: CameraPosition(
+                      target: _center,
+                      zoom: 12.0,
+                      bearing: 45.0,
+                      tilt: 45.0,
+                  ),
+                  markers: Set.from(allMarkers),
+                  onMapCreated: mapCreated,
+                  circles: circles,
+                  myLocationEnabled: true,
+                  myLocationButtonEnabled: true,
                 ),
-                markers: Set.from(allMarkers),
-                onMapCreated: mapCreated,
               ),
             ),
-
             Positioned(
               bottom: 20.0,
               child: Container(
@@ -178,7 +185,81 @@ class _MapScreenState extends State<_MapScreen> {
                   },
                 ),
               ),
-            )
+            ),
+            Positioned(
+              top: 20.0,
+              left: 36,
+              right: 36,
+              child: Container(
+                height: 79.0,
+                width: 350,
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(254, 254, 254, 1),
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey[500],
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        height: double.infinity,
+                        alignment: Alignment.centerLeft,
+                        padding: EdgeInsets.only(left: 8),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Nhập ngành nghề bạn muốn tìm',
+                            hintStyle: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey,
+                            ),
+                            enabledBorder: InputBorder.none,
+                            border: InputBorder.none,
+                          ),
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 8, right: 8),
+                      color: Colors.grey,
+                      height: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: double.infinity,
+                        alignment: Alignment.centerLeft,
+                        padding: EdgeInsets.only(left: 8),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Nhập vị trí tìm',
+                            hintStyle: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey,
+                            ),
+                            enabledBorder: InputBorder.none,
+                            border: InputBorder.none,
+                          ),
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.black
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              ),
+            ),
           ],
         ));
   }
@@ -196,5 +277,22 @@ class _MapScreenState extends State<_MapScreen> {
         bearing: 45.0,
         tilt: 45.0)));
   }
+
+  Set<Circle> circles = Set.from([
+    Circle(
+    circleId: CircleId('1'),
+    center:_center,
+    radius: 1800,
+    fillColor: Color.fromRGBO(0, 153, 153, 1).withOpacity(0.1),
+    strokeColor: Colors.transparent,
+  ),
+    Circle(
+      circleId: CircleId('1'),
+      center:_center,
+      radius: 1600,
+      fillColor: Color.fromRGBO(0, 153, 153, 1).withOpacity(0.2),
+      strokeColor: Colors.transparent,
+    )
+  ]);
 
 }

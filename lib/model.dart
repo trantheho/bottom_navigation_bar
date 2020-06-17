@@ -29,7 +29,7 @@ final List<Coffee> coffeeShops = [
       address: '463 7th Ave',
       description:
       'All-day American comfort eats in a basic diner-style setting',
-      locationCoords: LatLng(10.8018416, 106.6549777),
+      locationCoords: LatLng(10.8008942, 106.6633424),
       thumbNail: 'https://lh5.googleusercontent.com/p/AF1QipOfv3DSTkjsgvwCsUe_flDr4DBXneEVR1hWQCvR=w90-h90-n-k-no'
   ),
   Coffee(
@@ -37,7 +37,7 @@ final List<Coffee> coffeeShops = [
       address: '240 Sullivan St',
       description:
       'Small spot draws serious caffeine lovers with',
-      locationCoords: LatLng(10.8018416, 106.6549777),
+      locationCoords: LatLng(10.7860036,106.6514918),
       thumbNail: 'https://lh5.googleusercontent.com/p/AF1QipPGoxAP7eK6C44vSIx4SdhXdp78qiZz2qKp8-o1=w90-h90-n-k-no'
   ),
   Coffee(
@@ -45,7 +45,7 @@ final List<Coffee> coffeeShops = [
       address: '214 E 10th St',
       description:
       'Snazzy, compact Japanese cafe showcasing high-end coffee',
-      locationCoords: LatLng(10.8018416, 106.6549777),
+      locationCoords: LatLng(10.7907899,106.6384791),
       thumbNail: 'https://lh5.googleusercontent.com/p/AF1QipNhygtMc1wNzN4n6txZLzIhgJ-QZ044R4axyFZX=w90-h90-n-k-no'
   ),
   Coffee(
