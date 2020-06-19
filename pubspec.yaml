@@ -46,6 +46,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/
+    - assets/map_style.txt
 
   # To add assets to your application, add an assets section, like this:
   # assets:

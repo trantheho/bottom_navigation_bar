@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
-        margin: EdgeInsets.only(bottom: 12),
+        margin: EdgeInsets.only(bottom: 30),
         height: 50,
         width: 50,
         child: FloatingActionButton(

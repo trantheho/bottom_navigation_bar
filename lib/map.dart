@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'model.dart';
 
@@ -27,13 +28,16 @@ class _MapScreenState extends State<_MapScreen> {
   List<Marker> allMarkers = [];
 
   PageController _pageController;
-
   int prevPage;
+  String _mapStyle;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    rootBundle.loadString('assets/map_style.txt').then((string) {
+      _mapStyle = string;
+    });
     coffeeShops.forEach((element) {
       allMarkers.add(Marker(
           markerId: MarkerId(element.shopName),
@@ -169,6 +173,7 @@ class _MapScreenState extends State<_MapScreen> {
                   circles: circles,
                   myLocationEnabled: true,
                   myLocationButtonEnabled: true,
+                  mapType: MapType.normal,
                 ),
               ),
             ),
@@ -265,9 +270,8 @@ class _MapScreenState extends State<_MapScreen> {
   }
 
   void mapCreated(controller) {
-    setState(() {
-      _controller = controller;
-    });
+    _controller = controller;
+    _controller.setMapStyle(_mapStyle);
   }
 
   moveCamera() {
